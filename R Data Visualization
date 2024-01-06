@@ -1,0 +1,151 @@
+
+R version 4.3.2 (2023-10-31 ucrt) -- "Eye Holes"
+Copyright (C) 2023 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> # Create a data frame
+> dataframe1 <- data.frame (
++   Name = c("Juan", "Alcaraz", "Simantha"),
++   Age = c(22, 15, 19),
++   Vote = c(TRUE, FALSE, TRUE)
++ )
+> 
+> # pass index number inside [ ] 
+> print(dataframe1[1])
+      Name
+1     Juan
+2  Alcaraz
+3 Simantha
+> 
+> # pass column name inside [[  ]] 
+> print(dataframe1[["Name"]])
+[1] "Juan"     "Alcaraz"  "Simantha"
+> 
+> # use $ operator and column name 
+> print(dataframe1$Name)
+[1] "Juan"     "Alcaraz"  "Simantha"
+> 
+> temperatures <- c(22, 27, 26, 24, 23, 26, 28)
+> 
+> result <- barplot(temperatures, 
++   main = "Maximum Temperatures in a Week")
+> 
+> print(result)
+     [,1]
+[1,]  0.7
+[2,]  1.9
+[3,]  3.1
+[4,]  4.3
+[5,]  5.5
+[6,]  6.7
+[7,]  7.9
+> 
+> temperatures <- c(67 ,72 ,74 ,62 ,76 ,66 ,65 ,59 ,61 ,69 )
+> 
+> # histogram of temperatures vector
+> result <- hist(temperatures)
+> 
+> print(result)
+$breaks
+[1] 55 60 65 70 75 80
+
+$counts
+[1] 1 3 3 2 1
+
+$density
+[1] 0.02 0.06 0.06 0.04 0.02
+
+$mids
+[1] 57.5 62.5 67.5 72.5 77.5
+
+$xname
+[1] "temperatures"
+
+$equidist
+[1] TRUE
+
+attr(,"class")
+[1] "histogram"
+> 
+> expenditure <- c(600, 300, 150, 100, 200)
+> 
+> result <- pie(expenditure,
++   main = "Monthly Expenditure Breakdown",
++   labels = c("Housing", "Food", "Cloths", "Entertainment", "Other"),
++   col = c("red", "orange", "yellow", "blue", "green")
++ )
+> 
+> print(result)
+NULL
+> 
+> # use head() to load first six rows of mtcars dataset
+> head(mtcars)
+                   mpg cyl disp  hp drat    wt  qsec vs am gear carb
+Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
+> 
+> # add title, label, new color to boxplot
+> boxplot(mtcars$mpg,
++   main="Mileage Data Boxplot",
++   ylab="Miles Per Gallon(mpg)",
++   xlab="No. of Cylinders",
++   col="orange")
+> 
+> # use head() to load first six rows of airquality dataset
+> head(airquality)
+  Ozone Solar.R Wind Temp Month Day
+1    41     190  7.4   67     5   1
+2    36     118  8.0   72     5   2
+3    12     149 12.6   74     5   3
+4    18     313 11.5   62     5   4
+5    NA      NA 14.3   56     5   5
+6    28      NA 14.9   66     5   6
+> 
+> # add title, label, new color to strip chart
+> stripchart(airquality$Ozone,
++   main="Mean ozone in parts per billion at Roosevelt Island",
++   xlab="Parts Per Billion",
++   ylab="Ozone",
++   col="orange")
+> 
+> # save histogram in jpeg format in current directory
+> jpeg(file="histogram1.jpeg")
+> 
+> # a histogram we want to save
+> hist(airquality$Temp)
+> 
+> # call this function to save the file 
+> dev.off()
+windows 
+      2 
+> 
+> # create a vector named temp
+> temp <- c(5,7,6,4,8)
+> 
+> # barplot of temp without coloring
+> barplot(temp, main="By default")
+> 
+> # barplot of temp with coloring
+> barplot(temp, col="coral", main="With coloring")
+> 
+> 
