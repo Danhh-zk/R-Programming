@@ -1,0 +1,129 @@
+
+R version 4.3.2 (2023-10-31 ucrt) -- "Eye Holes"
+Copyright (C) 2023 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> message <-"Hello World!"
+> print(message)  
+[1] "Hello World!"
+> weight <- 63.5
+> print(weight)
+[1] 63.5
+> print(class(weight))
+[1] "numeric"
+> 
+> # real numbers
+> height <- 182
+> print(height)
+[1] 182
+> print(class(height))
+[1] "numeric"
+> 
+> company <- "Programiz"
+> 
+> # print string and variable together
+> print(paste("Welcome to", company))
+[1] "Welcome to Programiz"
+> 
+> x <- 10
+> y <- 23
+> 
+> # compare x and y
+> print(x == y)  # FALSE
+[1] FALSE
+> 
+> x <- 0
+> 
+> # check if x is positive or negative or zero
+> if (x > 0) {
++   print("x is a positive number")
++ } else if (x < 0) {
++   print("x is a negative number")
++ } else {
++   print("x is zero")
++ }
+[1] "x is zero"
+> 
+> # input vector of marks
+> marks <- c(63, 58, 12, 99, 49, 39, 41, 2)
+> 
+> # ifelse() function to determine pass/fail
+> ifelse(marks < 40, "FAIL", "PASS")
+[1] "PASS" "PASS" "FAIL" "PASS" "PASS" "FAIL" "PASS" "FAIL"
+> 
+> # vector of numbers
+> numbers = c(2, 3, 12, 14, 5, 19, 23, 64)
+> 
+> # for loop with next
+> for (i in numbers) {
++ 
++   # use next to skip odd numbers
++   if( i %% 2 != 0) {
++     next
++   }
++ 
++   print(i)
++ }
+[1] 2
+[1] 12
+[1] 14
+[1] 64
+> 
+> # define a function to compute addition
+> add <- function(a, b) {
++     return (a + b)
++ }
+> 
+> # nested call of the add function 
+> print(add(add(1, 2), add(3, 4)))
+[1] 10
+> 
+> message <- "R Programming"
+> 
+> # change string to uppercase
+> message_upper <- toupper(message)
+> cat("Uppercase:", message_upper)
+Uppercase: R PROGRAMMING> 
+> # change string to lowercase
+> message_lower <- tolower(message)
+> cat("\nLowercase:", message_lower)
+
+Lowercase: r programming> 
+> 
+> # a vector of string type
+> languages <- c("Swift", "Java", "R")
+> 
+> # access first element of languages
+> print(languages[1])  # "Swift"
+[1] "Swift"
+> 
+> # access third element of languages
+> print(languages[3]). # "R"
+Error: unexpected symbol in "print(languages[3])."
+> 
+> matrix1 <- matrix(c("Sabby", "Cathy", "Larry", "Harry"), nrow = 2, ncol = 2)
+> 
+> print(matrix1)
+     [,1]    [,2]   
+[1,] "Sabby" "Larry"
+[2,] "Cathy" "Harry"
+> 
+> # access element at 1st row, 2nd column
+> cat("\nDesired Element:", matrix1[1, 2])
+
+Desired Element: Larry> 
+> 
